@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=640">
+<meta charset="UTF-8">
+<title>丽格三十個非買不可理由</title>
+<meta name="keywords" content="丽格三十個非買不可的理由">
+<meta name="description" content="丽格三十個非買不可的理由">
+<link rel="stylesheet" type="text/css" href="css/indexThirtyBuy.css">
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.1.17.0.min.js"></script>
+<script type="text/javascript" src="js/swiper-3.2.7.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+<!-- <link rel="shortcut icon" href="images/icon.ico" /> -->
+<!--[if lt IE 9]>
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('figure');
+document.createElement('aside');
+document.createElement('footer');
+document.createElement('hgroup');
+</script>
+<![endif]-->
+</head>
+
+<body>
+	<!-- <div id="loading"><img src="images/loading.gif"></div> -->
+	<!-- <header></header> -->
+	<div class="wrap">
+		
+		<div class="content">
+			<canvas height="1138" width="640" id="canvas" class="canvas"></canvas>
+			<div class="logo"></div>
+			<div class="toIndexBtn"></div>
+			<div class="network">
+				
+				
+				<!-- <div class="networkFlicker"></div> -->
+				<div class="attention1"></div>
+				<div class="attention2"></div>
+				<div class="numberBox numberBox1">
+					<ul>
+						<li class="myis_1 movingVerticalDelay1" data-value="1">01</li>
+						<li class="myis_4 movingVerticalDelay2 lightBlue" data-value="4">04</li>
+						<li class="myis_7 movingVerticalDelay3" data-value="7">07</li>
+						<li class="myis_10 movingVerticalDelay4 lightBlue" data-value="10">10</li>
+						<li class="myis_13 movingVerticalDelay5" data-value="13">13</li>
+					</ul>
+				</div>
+				<div class="numberBox numberBox2">
+					<ul>
+						<li class="myis_16 movingVerticalDelay5" data-value="16">16</li>
+						<li class="myis_19 movingVerticalDelay4" data-value="19">19</li>
+						<li class="myis_22 movingVerticalDelay3 lightBlue" data-value="22">22</li>
+						<li class="myis_25 movingVerticalDelay2" data-value="25">25</li>
+						<li class="myis_28 movingVerticalDelay1" data-value="28">28</li>
+					</ul>
+				</div>
+				<div class="numberBox numberBox3">
+					<ul>
+						<li class="myis_2 movingVerticalDelay1" data-value="2">02</li>
+						<li class="myis_5 movingVerticalDelay2" data-value="5">05</li>
+						<li class="myis_8 movingVerticalDelay3" data-value="8">08</li>
+						<li class="myis_11 movingVerticalDelay4" data-value="11">11</li>
+						<li class="myis_14 movingVerticalDelay5 lightBlue" data-value="14">14</li>
+					</ul>
+				</div>
+				<div class="numberBox numberBox4">
+					<ul>
+						<li class="myis_17 movingVerticalDelay5" data-value="17">17</li>
+						<li class="myis_20 movingVerticalDelay4" data-value="20">20</li>
+						<li class="myis_23 movingVerticalDelay3" data-value="23">23</li>
+						<li class="myis_26 movingVerticalDelay2" data-value="26">26</li>
+						<li class="myis_29 movingVerticalDelay1 lightBlue" data-value="29">29</li>
+					</ul>
+				</div>
+				<div class="numberBox numberBox5">
+					<ul>
+						<li class="myis_3 movingVerticalDelay1 lightBlue" data-value="3">03</li>
+						<li class="myis_6 movingVerticalDelay2" data-value="6">06</li>
+						<li class="myis_9 movingVerticalDelay3 lightBlue" data-value="9">09</li>
+						<li class="myis_12 movingVerticalDelay4" data-value="12">12</li>
+						<li class="myis_15 movingVerticalDelay5" data-value="15">15</li>
+					</ul>
+				</div>
+				<div class="numberBox numberBox6">
+					<ul>
+						<li class="myis_18 movingVerticalDelay5" data-value="18">18</li>
+						<li class="myis_21 movingVerticalDelay4 lightBlue" data-value="21">21</li>
+						<li class="myis_24 movingVerticalDelay3" data-value="24">24</li>
+						<li class="myis_27 movingVerticalDelay2" data-value="27">27</li>
+						<li class="myis_30 movingVerticalDelay1" data-value="30">30</li>
+					</ul>
+				</div>
+			</div><!--network-->
+			<div class="openBox">
+				<canvas height="1138" width="640" id="canvas" class="canvas"></canvas>
+				<div class="btnClose"></div>
+				<div class="goFirstBtn"></div>
+				<div class="openPic swiper-container">
+					<div class="swiper-wrapper">
+						<!-- <div class="swiper-slide"><img src="images/openPic01.png" class="swiper-lazy"></div> -->
+					</div>
+				</div>
+			</div>
+			<div class="page31box">
+				<div class="page31BtnClose"></div>
+				<div class="page31bg"></div>
+				<div class="page31bg2">
+					<div class="bravo"></div>
+					<h2>恭喜您</h2>
+					<p>讀完30個理由</br>立即來電　享甜蜜價</p>
+					<a href="tel:04-3609-5888" target="_blank">04-3609-5888</a>
+					<!-- <span><img src="images/phone_git.gif"></span> -->
+				</div>
+			</div>
+		</div><!--content-->
+	</div><!--wrap-->
+</body>
+
+<script type="text/javascript">
+
+var init = function(){
+
+	"use strict";
+    var canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d'),
+        // w = canvas.width = window.innerWidth - 25,
+        // h = canvas.height = 600,
+        w = canvas.width = 1138,
+        h = canvas.height = 1600,
+
+        hue = 217,
+        stars = [],
+        count = 0,
+        maxStars = 200; //星星數量
+
+    var setTimeo;
+    ctx && (function() {
+        var canvas2 = document.createElement('canvas'),
+            ctx2 = canvas2.getContext('2d');
+        canvas2.width = 1138;
+        canvas2.height = 1138;
+        var half = canvas2.width / 2,
+            gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+
+        gradient2.addColorStop(0.03, '#fffbd2');
+        gradient2.addColorStop(0.03, 'white');
+        // gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+        gradient2.addColorStop(0.4, 'transparent');
+        gradient2.shadowBlur = 500;
+
+        ctx2.fillStyle = gradient2;
+        ctx2.beginPath();
+        ctx2.arc(half, half, half, 0, Math.PI * 2);
+        ctx2.fill();
+
+
+
+        // End cache
+
+        function random(min, max) {
+            if (arguments.length < 2) {
+                max = min;
+                min = 0;
+            }
+
+            if (min > max) {
+                var hold = max;
+                max = min;
+                min = hold;
+            }
+
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function maxOrbit(x, y) {
+            var max = Math.max(x, y),
+                diameter = Math.round(Math.sqrt(max * max + max * max));
+            return diameter / 2;
+            //星星移動範圍
+        }
+
+        var Star = function() {
+
+            this.orbitRadius = random(maxOrbit(w, h));
+            this.radius = random(60, this.orbitRadius) / 12;
+            //星星大小
+            this.orbitX = w / 3;
+            this.orbitY = h / 3;
+            this.timePassed = random(0, maxStars);
+            this.speed = random(this.orbitRadius) / 100000;
+            //星星移動速度
+            this.alpha = random(2, 10) / 10;
+
+            count++;
+            stars[count] = this;
+        }
+
+        Star.prototype.draw = function() {
+            var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+                y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+                twinkle = random(15);
+
+            if (twinkle === 1 && this.alpha > 0) {
+                // this.alpha -= 0.05;
+                TweenMax.to( this, 1 , {
+                    alpha: 0
+                } );
+            } else if (twinkle === 2 && this.alpha < 1) {
+                // this.alpha += 0.05;
+                TweenMax.to( this, 1 , {
+                    alpha: 1
+                } );
+            }
+
+            ctx.globalAlpha = this.alpha;
+            ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+            this.timePassed += this.speed;
+        }
+
+        for (var i = 0; i < maxStars; i++) {
+            new Star();
+        }
+
+        animation();
+    })();
+
+    function animation() {
+        ctx.clearRect(0, 0, w, h);
+
+        ctx.globalCompositeOperation = 'lighter';
+        for (var i = 1, l = stars.length; i < l; i++) {
+            stars[i].draw();
+        };
+
+        // window.requestAnimationFrame(animation);
+        setTimeo = setTimeout(animation, 100);
+    }
+
+    function removeE() {
+        clearTimeout(setTimeo)
+    };
+
+    function addE() {
+        animation();
+    };
+
+}
+init();
+</script>
+</html>

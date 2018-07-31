@@ -1,0 +1,27 @@
+@charset "utf-8";
+//-------固定import---------------------------
+
+//通用變數與mixin函式
+@import "helpers/_mixin.scss";
+//reset
+@import "base/_reset.scss";
+//layout
+@import "base/_layout.scss";
+//header
+@import "layout/_header.scss";
+//footer
+// @import "layout/_footer.scss";
+
+//-------共用自製工具---------------------------
+
+//scroll各式移動class
+@import "components/_scrollAnimation.scss";
+
+//-------外連css---------------------------
+
+//滑動套件
+@import "vendors/swiper.min.scss";
+
+//-------當頁css---------------------------
+
+@import "pages/_indexThirtyBuy.scss";

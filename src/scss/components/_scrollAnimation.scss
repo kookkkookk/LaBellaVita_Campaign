@@ -1,0 +1,48 @@
+@charset "utf-8";
+//共用
+@mixin animationShareOriginal{
+	opacity: 1;
+	transform: translate(0,0);
+}
+
+// 返回的原始點
+.movingOpacity.on, .movingLevel.on, .movingVertical.on, .movingLevelLeft.on{
+	@include animationShareOriginal;
+}
+@charset "utf-8";
+// 淡出
+.movingOpacity{
+	transition: all 0.5s ease-in-out 0.5s;
+	opacity: 0;
+}
+// 水平右至左
+.movingLevel{
+	transition: all 0.5s ease-in-out 0.5s;
+	opacity: 0;
+	transform: translateX(20px);
+}
+// 水平左至右
+.movingLevelLeft{
+	transition: all 0.5s ease-in-out 0.5s;
+	opacity: 0;
+	transform: translateX(-20px);
+}
+// 垂直上至下
+.movingVertical{
+	transition: all 0.5s ease-in-out 0.5s;
+	opacity: 0;
+	transform: translateY(20px);
+}
+// 垂直上至下 但準備delay用
+.movingVerticalDelay1, .movingVerticalDelay2, .movingVerticalDelay3, .movingVerticalDelay4, .movingVerticalDelay5, .movingVerticalDelay6, .movingVerticalDelay7{
+	transition: all 0.3s ease-in-out 0.3s;
+	opacity: 0;
+	transform: translateY(-10px);
+}
+// 返回的原始點 但有delay
+@for $i from 1 through 7 {
+	.movingVerticalDelay#{$i}.on{
+		transition-delay: $i*0.3s;
+		@include animationShareOriginal;
+	}
+}

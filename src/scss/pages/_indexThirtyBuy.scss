@@ -1,0 +1,357 @@
+@charset "UTF-8";
+
+@mixin numberBoxL{
+	>ul{
+		>li{
+			float: left;
+			margin-right: 11.5px;
+			&:last-child{
+				margin-right: 0px;
+			}
+		}
+	}
+}
+@mixin numberBoxR{
+	>ul{
+		>li{
+			float: left;
+			margin-right: 11.5px;
+			&:first-child{
+				margin-left: 54.5px;
+			}
+			&:last-child{
+				margin-right: 0px;
+			}
+		}
+	}
+}
+.canvas{		
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 50;
+	pointer-events: none;
+}
+.logo{
+	width: 120px;
+	height: 118px;
+	background-image: url('../images/home_logo.png');
+	position: absolute;
+	top: 0;
+	left: 52px;
+	cursor: pointer;
+	z-index: 50;
+}
+.toIndexBtn{
+	width: 114px;
+	height: 118px;
+	background-image: url('../images/home_homeBtn.png');
+	position: absolute;
+	top: 0;
+	right: 4px;
+	cursor: pointer;
+	z-index: 31;
+	>a{
+		display: block;
+		width: 114px;
+		height: 118px;
+	}
+}
+.page31LINK{
+	width: 230px;
+	height: 180px;
+	position: absolute;
+	top: 61%;
+	left: 50%;
+	margin-left: -115px;
+	cursor: pointer;
+	z-index: 31;
+	display: none;
+	>a{
+		display: block;
+		width: 230px;
+		height: 180px;
+	}
+}
+.network{
+	width: 640px;
+	height: 1138px;
+	position: relative;
+	
+	/*.networkFlicker{
+		width: 640px;
+		height: 1138px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url('../images/home_bg_flicker.png');
+		animation-duration: 2.5s;
+		animation-name: slidein;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+	}*/
+	.attention1{
+		display: none;
+		width: 640px;
+		height: 1138px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		// opacity: 0;
+		background-image: url('../images/home_attention1.png');
+		/*animation-duration: 4s;
+		animation-name: slidein_attention1;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;*/
+	}
+	.attention2{
+		display: none;
+		width: 640px;
+		height: 1138px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		// opacity: 0;
+		background-image: url('../images/home_attention2.png');
+		/*animation-delay: 4s;
+		animation-duration: 4s;
+		animation-name: slidein_attention2;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;*/
+	}
+	
+	.numberBox{
+		width: 100%;
+		height: 117px;
+		position: absolute;
+		left: 0;
+		// background-color: #ccc;
+		// opacity: 0.6;
+		>ul{
+			overflow: hidden;
+			>li{
+				font-family: ChanticleerRoman, Times New Roman, Microsoft JhengHei;
+				font-size: 65px;
+				width: 106px;
+				height: 117px;
+				// background-color: #759;
+				text-align: center;
+				line-height: 117px;
+				color: #fff;
+				cursor: pointer;
+				transform:scaleX(0.74);
+			}
+			>li.lightBlue{
+				color: #90d1d3;
+			}
+			// >li.active{
+			// 	color: #f39000;
+			// }
+		}
+	}
+	.numberBox1{
+		top: 125px;
+		@include numberBoxL;
+	}
+	.numberBox2{
+		top: 293px;
+		@include numberBoxR;
+	}
+	.numberBox3{
+		top: 460px;
+		@include numberBoxL;
+	}
+	.numberBox4{
+		top: 629px;
+		@include numberBoxR;
+	}
+	.numberBox5{
+		top: 797px;
+		@include numberBoxL;
+	}
+	.numberBox6{
+		top: 965px;
+		@include numberBoxR;
+	}
+}
+// @keyframes slidein {
+// 	from {
+// 		opacity: 0;
+// 	}
+
+// 	to {
+// 		opacity: 1;
+// 	}
+// }
+
+.openBox{
+	// display: none;
+	width: 100%;
+	height: 100%;
+	// background-color: rgba(#000, 0.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('../images/home_open_bg.jpg');
+	background-repeat: no-repeat;
+	background-position: 0% 100%;
+	background-size: contain;
+	.btnClose{
+		width: 60px;
+		height: 60px;
+		background-image: url('../images/openBox_close.png');
+		position: absolute;
+		// top: 20px;
+		top: -100px;
+		right: 15px;
+		cursor: pointer;
+		z-index: 32;
+	}
+	.goFirstBtn{
+		width: 75px;
+		height: 116px;
+		background-image: url('../images/home_goFirstBtn.png');
+		// position: fixed;
+		position: absolute;
+		bottom: 30px;
+		right: 15px;
+		cursor: pointer;
+		z-index: 32;
+	}
+	.openPic{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top:0;
+		left: 0;
+		right: 0;
+		background-image: url('../images/loading.gif');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		.swiper-wrapper{
+			font-size: 0;
+			img{
+				width: 100%;
+				height: auto;
+				display: block;
+			}
+		}
+	}
+}
+.page31box{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: #ee6d33;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 33;
+	.page31BtnClose{
+		width: 60px;
+		height: 60px;
+		background-image: url('../images/openBox31_close.png');
+		position: absolute;
+		// top: 20px;
+		top: -100px;
+		right: 15px;
+		cursor: pointer;
+		z-index: 32;
+	}
+	.page31bg{
+		display: none;
+		width: 100%;
+		height: 100%;
+		background-image: url('../images/page31bg.jpg');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: contain;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.page31bg2{
+		width: 100%;
+		height: 100%;
+		background-image: url('../images/page31bg2.png');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: contain;
+		position: absolute;
+		top: -50px;
+		right: 0;
+
+		transition: transform 1s; 
+		backface-visibility: hidden;
+		transform:perspective(800px)  rotateY( 180deg );
+
+		.bravo{
+			display: none;
+			width: 395px;
+			height: 209px;
+			background-image: url('../images/page31_bravo.png');
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+			background-size: contain;
+			position: absolute;
+			top: 260px;
+			left: 100px;
+		}
+		>h2{
+			display: none;
+			width: 100%;
+			text-align: center;
+			color: #ff6300;
+			font-family: "Microsoft JhengHei";
+			font-size: 65px;
+			font-weight: bold;
+			font-weight: bold;
+			position: absolute;
+			top: 450px;
+			left: 0;
+		}
+		>p{
+			display: none;
+			width: 100%;
+			text-align: center;
+			color: #fff;
+			font-family: "Microsoft JhengHei";
+			font-size: 34px;
+			font-weight: bold;
+			position: absolute;
+			top: 560px;
+			left: 0;
+			line-height: 60px;
+			letter-spacing: 2px;
+			transform:scaleX(0.9);
+		}
+		>a{
+			display: none;
+			width: 100%;
+			height: 220px;
+			text-align: center;
+			color: #fd5e45;
+			font-family: "Microsoft JhengHei";
+			font-size: 34px;
+			font-weight: bold;
+			position: absolute;
+			top: 730px;
+			left: 0;
+			background-image: url('../images/phone_git.gif');
+			background-position: 49% 100%;
+			background-repeat: no-repeat;
+		}
+		>span{
+			display: none;
+			width: 128px;
+			height: 158px;
+			position: absolute;
+			top: 796px;
+			left: 50%;
+			margin-left: -69px;
+		}
+	}
+	.page31bg2.flipped{
+		transform:perspective(800px) rotateY( 0deg );
+	}
+}

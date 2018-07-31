@@ -1,0 +1,48 @@
+@charset "utf-8";
+*, *:before, *:after{
+	margin: 0;
+	padding: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body, html{
+	position: relative;
+	background-color: #f9f9f9;
+	width: 100%;
+	height: 100%;
+	font-family:"Microsoft JhengHei", "PMingLiU", "Arial Unicode MS", sans-serif;
+	-webkit-overflow-scrolling: touch;
+	-webkit-text-size-adjust: none;
+}
+#loading{
+	position:fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: #ededed;
+	text-align: center;
+	z-index: 50;
+}
+#loading img{
+	margin-top: 20%;	
+}
+//最外層包含menu&footer
+.wrap{
+	width: 100%;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+	background-color: #301500;
+}
+//內頁用最外層 只包含content
+.content{
+	width: 640px;
+	min-height: 1138px;
+	// background-color: #006879;
+	background-image: url("../images/home_bg.jpg");
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+}
